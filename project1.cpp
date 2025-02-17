@@ -1,20 +1,6 @@
-/* A.I. Disclaimer: All work for this assignment was completed by myself and entirely without the use  
-of artificial intelligence tools such as ChatGPT, MS Copilot, other LLMs, etc. 
-
-/*
-Assignment: CSCI 2170 Project 1
-Class: CSCI 2170-D01
-Name: Steven Gobran
-Course Instructor: Dr. Li
-Due Date: 2/16/2025
-Description: This program determines the day of the week a person is born, using Zeller's formula. 
-The program reads person's birth date (month, day, year) from a datafile and outputs the day of the week a person is
-born. If birth date is invalid, the output is an error message.
-*/
-
-#include <iostream>  // for cin, cout, endl, etc
-#include <fstream> // for ifstream
-#include <cassert>  // for assert
+#include <iostream> 
+#include <fstream>
+#include <cassert> 
 using namespace std;
 
 int main()
@@ -26,14 +12,8 @@ int main()
         string result; 
 
         ifstream myIn("birthday.dat");
-        assert(myIn);
+        assert(myIn); 
 
-        // This loop will read one birthday at a time till the end
-        // of the data file is reached
-        // For each birthday read:
-        // (1) check whether the birthday is valid
-        //     if it is not valid, display the message
-        // (2) if it is valid compute and display the day of the week
         while (myIn >> month >> day >> year)
         {   
 
